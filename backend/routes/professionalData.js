@@ -21,7 +21,7 @@ const router = express.Router();
 
 router.get('/professional', professionalDataController.getData);
 
-router.post('/professional-data-post', professionalDataController.postData);
+router.post('/professional', professionalDataController.postData);
 
 
 module.exports = router;

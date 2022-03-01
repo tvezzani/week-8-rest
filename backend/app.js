@@ -22,12 +22,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-
 const professionalDataRoutes = require('./routes/professionalData');
 
 const app = express();
 
-app.use(bodyParser.json());
+var jsonParser = bodyParser.json({limit:1024*1024*10, type:'application/json'});
+app.use(jsonParser);
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
