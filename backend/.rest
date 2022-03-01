@@ -1,11 +1,16 @@
-GET http://localhost:8080/feed/posts HTTP/1.1
+GET http://localhost:8080/professional HTTP/1.1
 
 ###
 
-POST http://localhost:8080/feed/post HTTP/1.1
+POST http://localhost:8080/professional-data-post HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Second Post",
-    "content": "This is the second post"
+    "professionalName": "Batduck",
+    "base64Image": "http://localhost:8080/images/batmanDuck",
+    "primaryDescription" : "I am a batman duck",
+    "workDescription" : "I am a working duck",
+    "linkTitleText" : "Link",
+    "linkedInLink" : "linkedin.com/batduck",
+    "gitHubLink" : "github.com/batduck"
 }
